@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
 use work.components.all
 
-  
+ 
  entity top is
     port (
       clock           : in  std_logic; 
@@ -58,7 +58,7 @@ reset => rst,
 a => num_sync,
 b => 
 
-
+--nsl : select to show num_sync or result
 
 begin
 
@@ -66,17 +66,3 @@ begin
 
 
 
-
-
-
-state_leds : process(op_sync)
-begin
-
-case op_sync is
-when "00" => led <= "0001";
-when "01" => led <= "0010";
-when "10" => led <= "0100";
-when "11" => led <= "1000";
-end case;
-
-end arch;
