@@ -75,4 +75,16 @@ end component;
       seven_seg_out   : out std_logic_vector(6 downto 0)
     );  
   end component;  
+  
+component nsl is
+   port(
+     reset : in std_logic;
+     clk : in std_logic;
+     in_state : in std_logic_vector(3 downto 0);
+     flag : in std_logic;
+     out_state : out std_logic_vector(3 downto 0)
+    );
+end component;
+
+
 end components;

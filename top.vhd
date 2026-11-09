@@ -56,7 +56,8 @@ alu1 : alu
 port map(
 reset => rst,
 a => num_sync,
-b => 
+b => last_result
+
 
 --nsl : select to show num_sync or result
 
