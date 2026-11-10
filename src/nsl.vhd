@@ -14,8 +14,8 @@ end nsl;
 
 architecture beh of nsl is
 
-	signal state_sig1 : std_logic_vector(3 downto 0) := "01";
-	signal state_sig2 : std_logic_vector(3 downto 0) := "01";
+	signal state_sig1 : std_logic_vector(1 downto 0) := "01";
+	signal state_sig2 : std_logic_vector(1 downto 0) := "01";
 	signal pressed : std_logic := '0';
 
 begin

@@ -8,7 +8,7 @@ generic (addr_width : integer := 2;
     port (
       clk               : in std_logic;
 	  reset             : in std_logic;
-      state                : in std_logic_vector(1 downto 0);
+      state             : in std_logic_vector(1 downto 0);
       din               : in std_logic_vector(data_width - 1 downto 0);
       dout              : out std_logic_vector(data_width - 1 downto 0)
     );
@@ -21,15 +21,14 @@ signal RAM : ram_type;
 
 begin
 
-process(clk, reset)
-
 RAM(0) <= (others => '0');
 
+process(clk, reset)
 begin
 
 if reset = '0' then
 
-d_out <= RAM(0);
+dout <= RAM(0);
 
 elsif rising_edge(clk) then
 
@@ -39,7 +38,7 @@ RAM(2) <= RAM(3);
 RAM(3) <= din;
 dout <= din;
 else
-d_out <= RAM(3);
+dout <= RAM(3);
 end if;
 
 

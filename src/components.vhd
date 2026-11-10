@@ -13,7 +13,7 @@ package components is
       binary_in       : in std_logic_vector(7 downto 0);
       ones            : out std_logic_vector(3 downto 0);
       tens            : out std_logic_vector(3 downto 0);
-      hundreds        : out std_logic_vector(3 downto 0);
+      hundreds        : out std_logic_vector(3 downto 0)
     );  
   end component;  
 
@@ -33,8 +33,7 @@ package components is
     port (
       clk               : in std_logic;
 	  reset             : in std_logic;
-      state                : in std_logic;
-      addr              : in std_logic_vector(addr_width - 1 downto 0);
+      state                : in std_logic_vector(1 downto 0);
       din               : in std_logic_vector(data_width - 1 downto 0);
       dout              : out std_logic_vector(data_width - 1 downto 0)
     );
@@ -79,9 +78,9 @@ component nsl is
    port(
      reset : in std_logic;
      clk : in std_logic;
-     in_state : in std_logic_vector(3 downto 0);
+     in_state : in std_logic_vector(1 downto 0);
      flag : in std_logic;
-     out_state : out std_logic_vector(3 downto 0)
+     out_state : out std_logic_vector(1 downto 0)
     );
 end component;
 

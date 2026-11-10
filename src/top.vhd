@@ -1,27 +1,27 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
-use work.components.all
+use work.components.all;
 
  
- entity top is
+entity top is
     port (
       clock           : in  std_logic; 
       rst         : in  std_logic;
       execute       : in  std_logic;
       num_in        : in  std_logic_vector(7 downto 0);
       op            : in  std_logic_vector(1 downto 0);
-      led           : out std_logic_vector(1 downto 0);
+      state_leds           : out std_logic_vector(1 downto 0);
       hex_0         : out std_logic_vector(6 downto 0);
       hex_1         : out std_logic_vector(6 downto 0);
       hex_2         : out std_logic_vector(6 downto 0)
     );
- end entity;
+end top;
   
 architecture arch of top is
 
 signal this_state : std_logic_vector(1 downto 0) := "01";
-signal last_state : std_logic_vector(1 downto 0) := "01";
+signal next_state : std_logic_vector(1 downto 0) := "01";
 signal exec_blip : std_logic := '0';
 signal num_sync : std_logic_vector(7 downto 0);
 signal op_sync : std_logic_vector(1 downto 0);
@@ -61,7 +61,7 @@ alu1 : alu
 port map(
 reset => rst,
 a => num_sync,
-b => last_result
+b => last_result,
 op => op_sync,
 result => r_sig
 );
@@ -70,12 +70,16 @@ nsl1 : nsl
 port map(
 reset => rst,
 clk => clock,
-in_state => last_state,
+in_state => this_state,
 flag => exec_blip,
-out_state => this_state
+out_state => next_state
 );
 
 mem : memory
+generic map(
+addr_width => 2,
+data_width => 8
+)
 port map(
 clk => clock,
 reset => rst,

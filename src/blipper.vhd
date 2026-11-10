@@ -52,6 +52,6 @@ begin
         end if;
     end process;
 
-    blip <= bip_reg;
+    blip <= blip_reg;
 
 end beh;
