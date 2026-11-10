@@ -23,7 +23,7 @@ begin
 next_state : process (clk, reset, flag)
 begin
 
-if reset = '1' then
+if reset = '0' then
 state_sig1 <= "01";
 state_sig2 <= "01";
 

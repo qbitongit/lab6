@@ -14,7 +14,6 @@ package components is
       ones            : out std_logic_vector(3 downto 0);
       tens            : out std_logic_vector(3 downto 0);
       hundreds        : out std_logic_vector(3 downto 0);
-      thousands       : out std_logic_vector(3 downto 0)
     );  
   end component;  
 
@@ -34,7 +33,7 @@ package components is
     port (
       clk               : in std_logic;
 	  reset             : in std_logic;
-      we                : in std_logic;
+      state                : in std_logic;
       addr              : in std_logic_vector(addr_width - 1 downto 0);
       din               : in std_logic_vector(data_width - 1 downto 0);
       dout              : out std_logic_vector(data_width - 1 downto 0)
