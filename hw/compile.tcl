@@ -45,7 +45,10 @@ set_location_assignment PIN_AD11 -to num_in[4]
 set_location_assignment PIN_AD12 -to num_in[5]
 set_location_assignment PIN_AE11 -to num_in[6]
 set_location_assignment PIN_AC9 -to num_in[7]
-set_location_assignment PIN_AD10 -to num_in[8]
+set_location_assignment PIN_AD10 -to op[0]
+set_location_assignment PIN_AE12 -to op[1]
+
+
 
 set_location_assignment PIN_AE26 -to hex0[0]
 set_location_assignment PIN_AE27 -to hex0[1]

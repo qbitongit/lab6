@@ -12,9 +12,9 @@ entity top is
       num_in        : in  std_logic_vector(7 downto 0);
       op            : in  std_logic_vector(1 downto 0);
       state_leds           : out std_logic_vector(1 downto 0);
-      hex_0         : out std_logic_vector(6 downto 0);
-      hex_1         : out std_logic_vector(6 downto 0);
-      hex_2         : out std_logic_vector(6 downto 0)
+      hex0         : out std_logic_vector(6 downto 0);
+      hex1         : out std_logic_vector(6 downto 0);
+      hex2         : out std_logic_vector(6 downto 0)
     );
 end top;
   
@@ -100,24 +100,24 @@ hundreds => hund_dabbled
 ones_seg : seven_seg
 port map(
 bcd => ones_dabbled,
-seven_seg_out => hex_0
+seven_seg_out => hex0
 );
 
 tens_seg : seven_seg
 port map(
 bcd => tens_dabbled,
-seven_seg_out => hex_1
+seven_seg_out => hex1
 );
 
 
 hundreds_seg : seven_seg
 port map(
 bcd => hund_dabbled,
-seven_seg_out => hex_2
+seven_seg_out => hex2
 );
 
 
-state_leds <= this_state;
+state_leds <= next_state;
 this_state <= next_state;
 
 
