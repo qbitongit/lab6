@@ -104,15 +104,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "execute",
-					"strict" : false
-				},
-				{
 					"name" : "op[1]",
 					"strict" : false
 				},
 				{
 					"name" : "op[0]",
+					"strict" : false
+				},
+				{
+					"name" : "execute",
 					"strict" : false
 				},
 				{

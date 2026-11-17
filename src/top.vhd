@@ -27,6 +27,7 @@ signal num_sync : std_logic_vector(7 downto 0);
 signal op_sync : std_logic_vector(1 downto 0);
 signal last_result : std_logic_vector(7 downto 0);
 signal r_sig : std_logic_vector(7 downto 0);
+signal to_mem : std_logic_vector(7 downto 0);
 signal ones_dabbled : std_logic_vector(3 downto 0);
 signal tens_dabbled : std_logic_vector(3 downto 0);
 signal hund_dabbled : std_logic_vector(3 downto 0);
@@ -59,6 +60,7 @@ sync_out => op_sync
 
 alu1 : alu
 port map(
+clk => clock,
 reset => rst,
 a => num_sync,
 b => last_result,
@@ -86,6 +88,14 @@ reset => rst,
 state => this_state,
 din => r_sig,
 dout => last_result
+);
+
+din_select : mux_8bit
+port map(
+a => num_sync,
+b => r_sig,
+s => this_state,
+output => to_mem
 );
 
 dabbler : double_dabble

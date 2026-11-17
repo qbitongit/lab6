@@ -16,28 +16,32 @@ architecture beh of nsl is
 
 	signal state_sig1 : std_logic_vector(1 downto 0) := "01";
 	signal state_sig2 : std_logic_vector(1 downto 0) := "01";
+	signal prev_flag : std_logic := '0';
 
 begin
 
-next_state : process (clk, reset, flag)
+next_state : process (flag)
 begin
 
-if reset = '0' then
-state_sig1 <= "01";
-state_sig2 <= "01";
-
-elsif rising_edge(clk) then
-
-if flag = '1' then
+if (flag = '1') and (prev_flag = '0') then --rising edge
 state_sig1 <= (in_state(0) & in_state(1));
 else
-state_sig2 <= state_sig1;
-end if;
-
+state_sig1 <= in_state;
 end if;
 
 end process;
 
+clocked : process(clk, reset)
+begin
+if reset = '0' then
+state_sig1 <= "01";
+state_sig2 <= "01";
+elsif rising_edge(clk) then
+state_sig2 <= state_sig1;
 out_state <= state_sig2;
+end if;
+
+end process;
+
 
 end beh;

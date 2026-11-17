@@ -19,6 +19,7 @@ package components is
 
   component alu is
     port (
+	  clk : in std_logic;
       reset         : in  std_logic;
       a             : in  std_logic_vector(7 downto 0); 
       b             : in  std_logic_vector(7 downto 0);
@@ -26,6 +27,15 @@ package components is
       result        : out std_logic_vector(7 downto 0)
     );  
   end component; 
+  
+  component mux_8bit is
+port(
+a : in std_logic_vector(7 downto 0);
+b : in std_logic_vector(7 downto 0);
+s : in std_logic_vector(1 downto 0);
+output : out std_logic_vector(7 downto 0)
+);
+end component;
 
   component memory is 
     generic (addr_width : integer := 2;

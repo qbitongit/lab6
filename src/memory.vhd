@@ -40,17 +40,23 @@ elsif rising_edge(clk) then
 
 prev_state <= state;
 
-if (state = "10") then
+if state = "10" then
+
+if prev_state /= "10" then
 RAM(1) <= RAM(2);
 RAM(2) <= RAM(3);
 RAM(3) <= din;
+end if; --prevstate
+
 dout <= din;
 
-end if;
-
+else 
 dout <= RAM(3);
 
+end if;--state
+
 end if; --clk
+
 
 end process;
 
