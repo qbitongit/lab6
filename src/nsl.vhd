@@ -20,10 +20,12 @@ architecture beh of nsl is
 
 begin
 
-next_state : process (flag)
+next_state : process (flag, reset)
 begin
 
-if (flag = '1') and (prev_flag = '0') then --rising edge
+if reset = '0' then
+state_sig1 <= "01";
+elsif (flag = '1') and (prev_flag = '0') then --rising edge
 state_sig1 <= (in_state(0) & in_state(1));
 else
 state_sig1 <= in_state;
@@ -34,8 +36,8 @@ end process;
 clocked : process(clk, reset)
 begin
 if reset = '0' then
-state_sig1 <= "01";
 state_sig2 <= "01";
+out_state <= "01";
 elsif rising_edge(clk) then
 state_sig2 <= state_sig1;
 out_state <= state_sig2;

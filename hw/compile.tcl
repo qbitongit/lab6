@@ -21,6 +21,7 @@ set_global_assignment -name VHDL_FILE ../../src/components.vhd
 set_global_assignment -name VHDL_FILE ../../src/alu.vhd
 set_global_assignment -name VHDL_FILE ../../src/seven_seg.vhd
 set_global_assignment -name VHDL_FILE ../../src/blipper.vhd
+set_global_assignment -name VHDL_FILE ../../src/mux_8bit.vhd
 set_global_assignment -name VHDL_FILE ../../src/double_dabble.vhd
 set_global_assignment -name VHDL_FILE ../../src/nsl.vhd
 set_global_assignment -name VHDL_FILE ../../src/memory.vhd

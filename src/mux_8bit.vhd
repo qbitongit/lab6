@@ -12,3 +12,17 @@ output : out std_logic_vector(7 downto 0)
 end entity;
 
 architecture beh of mux_8bit is
+begin
+
+mux : process (a, b, s)
+begin
+
+case s is
+
+when "01" => output <= a;
+
+when "10" => output <= b;
+
+end case;
+
+end process;

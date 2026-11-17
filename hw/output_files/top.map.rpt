@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Mon Nov 16 21:05:59 2026
+Tue Nov 17 14:06:21 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,18 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: memory:mem
- 13. Parameter Settings for Inferred Entity Instance: alu:alu1|lpm_divide:Div0
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -44,27 +33,22 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Nov 16 21:05:59 2026       ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                   ; top                                         ;
-; Top-level Entity Name           ; top                                         ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 46                                          ;
-; Total pins                      ; 36                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 1                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Tue Nov 17 14:06:21 2026           ;
+; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name               ; top                                         ;
+; Top-level Entity Name       ; top                                         ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -163,218 +147,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-; ../../src/top.vhd                ; yes             ; User VHDL File               ; C:/projects/HDL/lab6/lab6/src/top.vhd                                      ;         ;
-; ../../src/components.vhd         ; yes             ; User VHDL File               ; C:/projects/HDL/lab6/lab6/src/components.vhd                               ;         ;
-; ../../src/alu.vhd                ; yes             ; User VHDL File               ; C:/projects/HDL/lab6/lab6/src/alu.vhd                                      ;         ;
-; ../../src/seven_seg.vhd          ; yes             ; User VHDL File               ; C:/projects/HDL/lab6/lab6/src/seven_seg.vhd                                ;         ;
-; ../../src/blipper.vhd            ; yes             ; User VHDL File               ; C:/projects/HDL/lab6/lab6/src/blipper.vhd                                  ;         ;
-; ../../src/double_dabble.vhd      ; yes             ; User VHDL File               ; C:/projects/HDL/lab6/lab6/src/double_dabble.vhd                            ;         ;
-; ../../src/nsl.vhd                ; yes             ; User VHDL File               ; C:/projects/HDL/lab6/lab6/src/nsl.vhd                                      ;         ;
-; ../../src/memory.vhd             ; yes             ; User VHDL File               ; C:/projects/HDL/lab6/lab6/src/memory.vhd                                   ;         ;
-; ../../src/synchronizer_2bit.vhd  ; yes             ; User VHDL File               ; C:/projects/HDL/lab6/lab6/src/synchronizer_2bit.vhd                        ;         ;
-; ../../src/synchronizer_8bit.vhd  ; yes             ; User VHDL File               ; C:/projects/HDL/lab6/lab6/src/synchronizer_8bit.vhd                        ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc      ;         ;
-; db/lpm_divide_9am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/projects/HDL/lab6/lab6/hw/project/db/lpm_divide_9am.tdf                 ;         ;
-; db/sign_div_unsign_fkh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/projects/HDL/lab6/lab6/hw/project/db/sign_div_unsign_fkh.tdf            ;         ;
-; db/alt_u_div_4te.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/projects/HDL/lab6/lab6/hw/project/db/alt_u_div_4te.tdf                  ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 94        ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 155       ;
-;     -- 7 input functions                    ; 2         ;
-;     -- 6 input functions                    ; 26        ;
-;     -- 5 input functions                    ; 34        ;
-;     -- 4 input functions                    ; 48        ;
-;     -- <=3 input functions                  ; 45        ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 46        ;
-;                                             ;           ;
-; I/O pins                                    ; 36        ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 1         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; rst~input ;
-; Maximum fan-out                             ; 54        ;
-; Total fan-out                               ; 893       ;
-; Average fan-out                             ; 3.26      ;
-+---------------------------------------------+-----------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                     ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Entity Name         ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |top                                      ; 155 (0)             ; 46 (0)                    ; 0                 ; 1          ; 36   ; 0            ; |top                                                                                                          ; top                 ; work         ;
-;    |alu:alu1|                             ; 99 (17)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|alu:alu1                                                                                                 ; alu                 ; work         ;
-;       |lpm_divide:Div0|                   ; 82 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|alu:alu1|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_9am:auto_generated|  ; 82 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|alu:alu1|lpm_divide:Div0|lpm_divide_9am:auto_generated                                                   ; lpm_divide_9am      ; work         ;
-;             |sign_div_unsign_fkh:divider| ; 82 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|alu:alu1|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider                       ; sign_div_unsign_fkh ; work         ;
-;                |alt_u_div_4te:divider|    ; 82 (82)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|alu:alu1|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider ; alt_u_div_4te       ; work         ;
-;    |blipper:exec_blipper|                 ; 2 (2)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |top|blipper:exec_blipper                                                                                     ; blipper             ; work         ;
-;    |double_dabble:dabbler|                ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|double_dabble:dabbler                                                                                    ; double_dabble       ; work         ;
-;    |memory:mem|                           ; 3 (3)               ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |top|memory:mem                                                                                               ; memory              ; work         ;
-;    |nsl:nsl1|                             ; 2 (2)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |top|nsl:nsl1                                                                                                 ; nsl                 ; work         ;
-;    |seven_seg:hundreds_seg|               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|seven_seg:hundreds_seg                                                                                   ; seven_seg           ; work         ;
-;    |seven_seg:ones_seg|                   ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|seven_seg:ones_seg                                                                                       ; seven_seg           ; work         ;
-;    |seven_seg:tens_seg|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|seven_seg:tens_seg                                                                                       ; seven_seg           ; work         ;
-;    |synchronizer_2bit:op_syncer|          ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |top|synchronizer_2bit:op_syncer                                                                              ; synchronizer_2bit   ; work         ;
-;    |synchronizer_8bit:number_syncer|      ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |top|synchronizer_8bit:number_syncer                                                                          ; synchronizer_8bit   ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary  ;
-+---------------------------------+-------------+
-; Statistic                       ; Number Used ;
-+---------------------------------+-------------+
-; Independent 9x9                 ; 1           ;
-; Total number of DSP blocks      ; 1           ;
-;                                 ;             ;
-; Fixed Point Unsigned Multiplier ; 1           ;
-+---------------------------------+-------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 46    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 36    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 22    ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; nsl:nsl1|state_sig2[0]                 ; 5       ;
-; nsl:nsl1|state_sig1[0]                 ; 1       ;
-; blipper:exec_blipper|button_sync       ; 2       ;
-; blipper:exec_blipper|button_prev       ; 1       ;
-; blipper:exec_blipper|button_meta       ; 1       ;
-; Total number of inverted registers = 5 ;         ;
-+----------------------------------------+---------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |top|alu:alu1|result[6]    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: memory:mem ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; addr_width     ; 2     ; Signed Integer                 ;
-; data_width     ; 8     ; Signed Integer                 ;
-+----------------+-------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: alu:alu1|lpm_divide:Div0 ;
-+------------------------+----------------+---------------------------------+
-; Parameter Name         ; Value          ; Type                            ;
-+------------------------+----------------+---------------------------------+
-; LPM_WIDTHN             ; 8              ; Untyped                         ;
-; LPM_WIDTHD             ; 8              ; Untyped                         ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                         ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                         ;
-; LPM_PIPELINE           ; 0              ; Untyped                         ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                         ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                         ;
-; CBXI_PARAMETER         ; lpm_divide_9am ; Untyped                         ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                         ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                         ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                      ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                    ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                    ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                  ;
-+------------------------+----------------+---------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 46                          ;
-;     CLR               ; 24                          ;
-;     ENA               ; 2                           ;
-;     ENA CLR           ; 12                          ;
-;     ENA SLD           ; 8                           ;
-; arriav_lcell_comb     ; 164                         ;
-;     arith             ; 49                          ;
-;         0 data inputs ; 10                          ;
-;         2 data inputs ; 6                           ;
-;         4 data inputs ; 8                           ;
-;         5 data inputs ; 25                          ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 104                         ;
-;         1 data inputs ; 13                          ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 11                          ;
-;         4 data inputs ; 37                          ;
-;         5 data inputs ; 9                           ;
-;         6 data inputs ; 26                          ;
-;     shared            ; 9                           ;
-;         0 data inputs ; 3                           ;
-;         2 data inputs ; 3                           ;
-;         4 data inputs ; 3                           ;
-; arriav_mac            ; 1                           ;
-; boundary_port         ; 36                          ;
-;                       ;                             ;
-; Max LUT depth         ; 15.70                       ;
-; Average LUT depth     ; 8.20                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:02     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -383,7 +160,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 16 21:05:33 2026
+    Info: Processing started: Tue Nov 17 14:06:09 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -393,7 +170,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file /projec
 Info (12021): Found 1 design units, including 0 entities, in source file /projects/hdl/lab6/lab6/src/components.vhd
     Info (12022): Found design unit 1: components File: C:/projects/HDL/lab6/lab6/src/components.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file /projects/hdl/lab6/lab6/src/alu.vhd
-    Info (12022): Found design unit 1: alu-beh File: C:/projects/HDL/lab6/lab6/src/alu.vhd Line: 19
+    Info (12022): Found design unit 1: alu-beh File: C:/projects/HDL/lab6/lab6/src/alu.vhd Line: 20
     Info (12023): Found entity 1: alu File: C:/projects/HDL/lab6/lab6/src/alu.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file /projects/hdl/lab6/lab6/src/seven_seg.vhd
     Info (12022): Found design unit 1: seven_seg-beh File: C:/projects/HDL/lab6/lab6/src/seven_seg.vhd Line: 12
@@ -401,6 +178,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file /projec
 Info (12021): Found 2 design units, including 1 entities, in source file /projects/hdl/lab6/lab6/src/blipper.vhd
     Info (12022): Found design unit 1: blipper-beh File: C:/projects/HDL/lab6/lab6/src/blipper.vhd Line: 15
     Info (12023): Found entity 1: blipper File: C:/projects/HDL/lab6/lab6/src/blipper.vhd Line: 6
+Error (10522): VHDL Syntax error at mux_8bit.vhd(28): experienced unexpected end-of-file ;  expecting "end", or "(", or an identifier, or a concurrent statement File: C:/projects/HDL/lab6/lab6/src/mux_8bit.vhd Line: 28
+Info (12021): Found 0 design units, including 0 entities, in source file /projects/hdl/lab6/lab6/src/mux_8bit.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file /projects/hdl/lab6/lab6/src/double_dabble.vhd
     Info (12022): Found design unit 1: double_dabble-beh File: C:/projects/HDL/lab6/lab6/src/double_dabble.vhd Line: 15
     Info (12023): Found entity 1: double_dabble File: C:/projects/HDL/lab6/lab6/src/double_dabble.vhd Line: 5
@@ -419,46 +198,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file /projec
 Info (12021): Found 2 design units, including 1 entities, in source file /projects/hdl/lab6/lab6/src/synchronizer_8bit.vhd
     Info (12022): Found design unit 1: synchronizer_8bit-beh File: C:/projects/HDL/lab6/lab6/src/synchronizer_8bit.vhd Line: 17
     Info (12023): Found entity 1: synchronizer_8bit File: C:/projects/HDL/lab6/lab6/src/synchronizer_8bit.vhd Line: 8
-Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "blipper" for hierarchy "blipper:exec_blipper" File: C:/projects/HDL/lab6/lab6/src/top.vhd Line: 36
-Info (12128): Elaborating entity "synchronizer_8bit" for hierarchy "synchronizer_8bit:number_syncer" File: C:/projects/HDL/lab6/lab6/src/top.vhd Line: 44
-Info (12128): Elaborating entity "synchronizer_2bit" for hierarchy "synchronizer_2bit:op_syncer" File: C:/projects/HDL/lab6/lab6/src/top.vhd Line: 52
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu1" File: C:/projects/HDL/lab6/lab6/src/top.vhd Line: 60
-Info (12128): Elaborating entity "nsl" for hierarchy "nsl:nsl1" File: C:/projects/HDL/lab6/lab6/src/top.vhd Line: 69
-Info (12128): Elaborating entity "memory" for hierarchy "memory:mem" File: C:/projects/HDL/lab6/lab6/src/top.vhd Line: 78
-Warning (10036): Verilog HDL or VHDL warning at memory.vhd(21): object "out_sig" assigned a value but never read File: C:/projects/HDL/lab6/lab6/src/memory.vhd Line: 21
-Warning (10492): VHDL Process Statement warning at memory.vhd(34): signal "RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/projects/HDL/lab6/lab6/src/memory.vhd Line: 34
-Warning (10492): VHDL Process Statement warning at memory.vhd(35): signal "RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/projects/HDL/lab6/lab6/src/memory.vhd Line: 35
-Warning (10492): VHDL Process Statement warning at memory.vhd(36): signal "RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/projects/HDL/lab6/lab6/src/memory.vhd Line: 36
-Warning (10492): VHDL Process Statement warning at memory.vhd(37): signal "RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/projects/HDL/lab6/lab6/src/memory.vhd Line: 37
-Info (12128): Elaborating entity "double_dabble" for hierarchy "double_dabble:dabbler" File: C:/projects/HDL/lab6/lab6/src/top.vhd Line: 91
-Info (12128): Elaborating entity "seven_seg" for hierarchy "seven_seg:ones_seg" File: C:/projects/HDL/lab6/lab6/src/top.vhd Line: 100
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "alu:alu1|Div0" File: C:/projects/HDL/lab6/lab6/src/alu.vhd Line: 27
-Info (12130): Elaborated megafunction instantiation "alu:alu1|lpm_divide:Div0" File: C:/projects/HDL/lab6/lab6/src/alu.vhd Line: 27
-Info (12133): Instantiated megafunction "alu:alu1|lpm_divide:Div0" with the following parameter: File: C:/projects/HDL/lab6/lab6/src/alu.vhd Line: 27
-    Info (12134): Parameter "LPM_WIDTHN" = "8"
-    Info (12134): Parameter "LPM_WIDTHD" = "8"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_9am.tdf
-    Info (12023): Found entity 1: lpm_divide_9am File: C:/projects/HDL/lab6/lab6/hw/project/db/lpm_divide_9am.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_fkh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_fkh File: C:/projects/HDL/lab6/lab6/hw/project/db/sign_div_unsign_fkh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_4te.tdf
-    Info (12023): Found entity 1: alt_u_div_4te File: C:/projects/HDL/lab6/lab6/hw/project/db/alt_u_div_4te.tdf Line: 22
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 233 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 23 output pins
-    Info (21061): Implemented 196 logic cells
-    Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4930 megabytes
-    Info: Processing ended: Mon Nov 16 21:05:59 2026
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:22
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 4844 megabytes
+    Error: Processing ended: Tue Nov 17 14:06:21 2026
+    Error: Elapsed time: 00:00:12
+    Error: Total CPU time (on all processors): 00:00:24
 
 

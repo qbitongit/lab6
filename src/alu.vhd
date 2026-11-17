@@ -21,7 +21,7 @@ architecture beh of alu  is
 
 signal mult_temp : std_logic_vector(15 downto 0);
 signal div_temp  : std_logic_vector(7 downto 0);
-signal r_flop : std_logic_vector(7 downto 0);
+signal r_temp : std_logic_vector(7 downto 0);
 
 begin
 
