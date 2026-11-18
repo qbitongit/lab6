@@ -86,7 +86,7 @@ port map(
 clk => clock,
 reset => rst,
 state => this_state,
-din => r_sig,
+din => to_mem,
 dout => last_result
 );
 

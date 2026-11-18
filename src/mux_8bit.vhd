@@ -23,6 +23,10 @@ when "01" => output <= a;
 
 when "10" => output <= b;
 
+when others => output <= a;
+
 end case;
 
 end process;
+
+end beh;
