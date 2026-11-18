@@ -26,12 +26,14 @@ signal r_temp : std_logic_vector(7 downto 0);
 begin
 
 mult_temp <= std_logic_vector(unsigned(a) * unsigned(b));
-div_temp  <= std_logic_vector(unsigned(a) / unsigned(b));
+div_temp  <= std_logic_vector(unsigned(a) / unsigned(b)) when unsigned(b) /= 0
+else (others => '0');
 
-process(clk, reset,a,b,op,mult_temp,div_temp)
+process(clk, reset)
   begin
     if (reset = '0') then 
-      result <= (others => '0');
+	  result <= (others => '0');
+      r_temp <= (others => '0');
     elsif rising_edge(clk) then
 	
 	if (op = "00") then

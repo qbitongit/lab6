@@ -36,7 +36,7 @@ process(binary_in)
     bcd := (others => '0');
     
     -- read input into temp variable
-    temp(11 downto 0) := binary_in & "0000";
+    temp(11 downto 0) :=  "0000" & binary_in;
     
     -- cycle 12 times as we have 12 input bits
     -- this could be optimized, we dont need to check and add 3 for the 
