@@ -22,29 +22,29 @@ num_in[6] => synchronizer_8bit:number_syncer.async_in[6]
 num_in[7] => synchronizer_8bit:number_syncer.async_in[7]
 op[0] => synchronizer_2bit:op_syncer.async_in[0]
 op[1] => synchronizer_2bit:op_syncer.async_in[1]
-state_leds[0] <= nsl:nsl1.out_state[0]
-state_leds[1] <= nsl:nsl1.out_state[1]
-hex0[0] <= seven_seg:ones_seg.seven_seg_out[0]
-hex0[1] <= seven_seg:ones_seg.seven_seg_out[1]
-hex0[2] <= seven_seg:ones_seg.seven_seg_out[2]
-hex0[3] <= seven_seg:ones_seg.seven_seg_out[3]
-hex0[4] <= seven_seg:ones_seg.seven_seg_out[4]
-hex0[5] <= seven_seg:ones_seg.seven_seg_out[5]
-hex0[6] <= seven_seg:ones_seg.seven_seg_out[6]
-hex1[0] <= seven_seg:tens_seg.seven_seg_out[0]
-hex1[1] <= seven_seg:tens_seg.seven_seg_out[1]
-hex1[2] <= seven_seg:tens_seg.seven_seg_out[2]
-hex1[3] <= seven_seg:tens_seg.seven_seg_out[3]
-hex1[4] <= seven_seg:tens_seg.seven_seg_out[4]
-hex1[5] <= seven_seg:tens_seg.seven_seg_out[5]
-hex1[6] <= seven_seg:tens_seg.seven_seg_out[6]
-hex2[0] <= seven_seg:hundreds_seg.seven_seg_out[0]
-hex2[1] <= seven_seg:hundreds_seg.seven_seg_out[1]
-hex2[2] <= seven_seg:hundreds_seg.seven_seg_out[2]
-hex2[3] <= seven_seg:hundreds_seg.seven_seg_out[3]
-hex2[4] <= seven_seg:hundreds_seg.seven_seg_out[4]
-hex2[5] <= seven_seg:hundreds_seg.seven_seg_out[5]
-hex2[6] <= seven_seg:hundreds_seg.seven_seg_out[6]
+state_leds[0] << nsl:nsl1.out_state[0]
+state_leds[1] << nsl:nsl1.out_state[1]
+hex0[0] << seven_seg:ones_seg.seven_seg_out[0]
+hex0[1] << seven_seg:ones_seg.seven_seg_out[1]
+hex0[2] << seven_seg:ones_seg.seven_seg_out[2]
+hex0[3] << seven_seg:ones_seg.seven_seg_out[3]
+hex0[4] << seven_seg:ones_seg.seven_seg_out[4]
+hex0[5] << seven_seg:ones_seg.seven_seg_out[5]
+hex0[6] << seven_seg:ones_seg.seven_seg_out[6]
+hex1[0] << seven_seg:tens_seg.seven_seg_out[0]
+hex1[1] << seven_seg:tens_seg.seven_seg_out[1]
+hex1[2] << seven_seg:tens_seg.seven_seg_out[2]
+hex1[3] << seven_seg:tens_seg.seven_seg_out[3]
+hex1[4] << seven_seg:tens_seg.seven_seg_out[4]
+hex1[5] << seven_seg:tens_seg.seven_seg_out[5]
+hex1[6] << seven_seg:tens_seg.seven_seg_out[6]
+hex2[0] << seven_seg:hundreds_seg.seven_seg_out[0]
+hex2[1] << seven_seg:hundreds_seg.seven_seg_out[1]
+hex2[2] << seven_seg:hundreds_seg.seven_seg_out[2]
+hex2[3] << seven_seg:hundreds_seg.seven_seg_out[3]
+hex2[4] << seven_seg:hundreds_seg.seven_seg_out[4]
+hex2[5] << seven_seg:hundreds_seg.seven_seg_out[5]
+hex2[6] << seven_seg:hundreds_seg.seven_seg_out[6]
 
 
 |top|blipper:exec_blipper
@@ -127,14 +127,6 @@ sync_out[1] <= flop2[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|alu:alu1
-clk => r_temp[0].CLK
-clk => r_temp[1].CLK
-clk => r_temp[2].CLK
-clk => r_temp[3].CLK
-clk => r_temp[4].CLK
-clk => r_temp[5].CLK
-clk => r_temp[6].CLK
-clk => r_temp[7].CLK
 clk => result[0]~reg0.CLK
 clk => result[1]~reg0.CLK
 clk => result[2]~reg0.CLK
@@ -143,14 +135,6 @@ clk => result[4]~reg0.CLK
 clk => result[5]~reg0.CLK
 clk => result[6]~reg0.CLK
 clk => result[7]~reg0.CLK
-reset => r_temp[0].ACLR
-reset => r_temp[1].ACLR
-reset => r_temp[2].ACLR
-reset => r_temp[3].ACLR
-reset => r_temp[4].ACLR
-reset => r_temp[5].ACLR
-reset => r_temp[6].ACLR
-reset => r_temp[7].ACLR
 reset => result[0]~reg0.ACLR
 reset => result[1]~reg0.ACLR
 reset => result[2]~reg0.ACLR

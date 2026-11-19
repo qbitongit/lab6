@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Wed Nov 18 10:34:31 2026
+Wed Nov 18 20:09:09 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -48,13 +48,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Nov 18 10:34:31 2026       ;
+; Analysis & Synthesis Status     ; Successful - Wed Nov 18 20:09:09 2026       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; top                                         ;
 ; Top-level Entity Name           ; top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 54                                          ;
+; Total registers                 ; 46                                          ;
 ; Total pins                      ; 36                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -203,25 +203,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 81          ;
+; Estimate of Logic utilization (ALMs needed) ; 80          ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 135         ;
+; Combinational ALUT usage for logic          ; 140         ;
 ;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 10          ;
-;     -- 5 input functions                    ; 44          ;
-;     -- 4 input functions                    ; 42          ;
-;     -- <=3 input functions                  ; 39          ;
+;     -- 6 input functions                    ; 11          ;
+;     -- 5 input functions                    ; 41          ;
+;     -- 4 input functions                    ; 51          ;
+;     -- <=3 input functions                  ; 37          ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 54          ;
+; Dedicated logic registers                   ; 46          ;
 ;                                             ;             ;
 ; I/O pins                                    ; 36          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 1           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 54          ;
-; Total fan-out                               ; 825         ;
-; Average fan-out                             ; 3.15        ;
+; Maximum fan-out                             ; 46          ;
+; Total fan-out                               ; 807         ;
+; Average fan-out                             ; 3.12        ;
 +---------------------------------------------+-------------+
 
 
@@ -230,16 +230,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |top                                      ; 135 (0)             ; 54 (0)                    ; 0                 ; 1          ; 36   ; 0            ; |top                                                                                                          ; top                 ; work         ;
-;    |alu:alu1|                             ; 101 (20)            ; 16 (16)                   ; 0                 ; 1          ; 0    ; 0            ; |top|alu:alu1                                                                                                 ; alu                 ; work         ;
-;       |lpm_divide:Div0|                   ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|alu:alu1|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_9am:auto_generated|  ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|alu:alu1|lpm_divide:Div0|lpm_divide_9am:auto_generated                                                   ; lpm_divide_9am      ; work         ;
-;             |sign_div_unsign_fkh:divider| ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|alu:alu1|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider                       ; sign_div_unsign_fkh ; work         ;
-;                |alt_u_div_4te:divider|    ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|alu:alu1|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider ; alt_u_div_4te       ; work         ;
+; |top                                      ; 140 (0)             ; 46 (0)                    ; 0                 ; 1          ; 36   ; 0            ; |top                                                                                                          ; top                 ; work         ;
+;    |alu:alu1|                             ; 100 (22)            ; 8 (8)                     ; 0                 ; 1          ; 0    ; 0            ; |top|alu:alu1                                                                                                 ; alu                 ; work         ;
+;       |lpm_divide:Div0|                   ; 78 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|alu:alu1|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_9am:auto_generated|  ; 78 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|alu:alu1|lpm_divide:Div0|lpm_divide_9am:auto_generated                                                   ; lpm_divide_9am      ; work         ;
+;             |sign_div_unsign_fkh:divider| ; 78 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|alu:alu1|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider                       ; sign_div_unsign_fkh ; work         ;
+;                |alt_u_div_4te:divider|    ; 78 (78)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|alu:alu1|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider ; alt_u_div_4te       ; work         ;
 ;    |blipper:exec_blipper|                 ; 2 (2)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |top|blipper:exec_blipper                                                                                     ; blipper             ; work         ;
-;    |double_dabble:dabbler|                ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|double_dabble:dabbler                                                                                    ; double_dabble       ; work         ;
+;    |double_dabble:dabbler|                ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|double_dabble:dabbler                                                                                    ; double_dabble       ; work         ;
 ;    |memory:mem|                           ; 1 (1)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |top|memory:mem                                                                                               ; memory              ; work         ;
-;    |mux_8bit:din_select|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|mux_8bit:din_select                                                                                      ; mux_8bit            ; work         ;
+;    |mux_8bit:din_select|                  ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|mux_8bit:din_select                                                                                      ; mux_8bit            ; work         ;
 ;    |nsl:nsl1|                             ; 2 (2)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |top|nsl:nsl1                                                                                                 ; nsl                 ; work         ;
 ;    |seven_seg:hundreds_seg|               ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|seven_seg:hundreds_seg                                                                                   ; seven_seg           ; work         ;
 ;    |seven_seg:ones_seg|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|seven_seg:ones_seg                                                                                       ; seven_seg           ; work         ;
@@ -284,10 +284,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 54    ;
+; Total registers                              ; 46    ;
 ; Number of registers using Synchronous Clear  ; 8     ;
-; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 54    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 46    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 12    ;
 ; Number of registers using Preset             ; 0     ;
@@ -299,11 +299,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; nsl:nsl1|state_sig2[0]                 ; 4       ;
+; nsl:nsl1|state_sig2[0]                 ; 12      ;
 ; nsl:nsl1|state_sig1[0]                 ; 1       ;
-; memory:mem|prev_state[0]               ; 1       ;
 ; blipper:exec_blipper|button_sync       ; 2       ;
 ; blipper:exec_blipper|button_prev       ; 1       ;
+; memory:mem|prev_state[0]               ; 1       ;
 ; blipper:exec_blipper|button_meta       ; 1       ;
 ; Total number of inverted registers = 6 ;         ;
 +----------------------------------------+---------+
@@ -314,8 +314,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top|memory:mem|RAM[3][7]  ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|alu:alu1|r_temp[0]    ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|alu:alu1|result[3]    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -358,25 +357,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 54                          ;
-;     CLR               ; 34                          ;
+; arriav_ff             ; 46                          ;
+;     CLR               ; 26                          ;
 ;     CLR SCLR          ; 8                           ;
-;     ENA CLR           ; 4                           ;
-;     ENA CLR SLD       ; 8                           ;
-; arriav_lcell_comb     ; 141                         ;
+;     ENA CLR           ; 12                          ;
+; arriav_lcell_comb     ; 146                         ;
 ;     arith             ; 49                          ;
 ;         0 data inputs ; 10                          ;
 ;         2 data inputs ; 6                           ;
 ;         4 data inputs ; 8                           ;
 ;         5 data inputs ; 25                          ;
-;     normal            ; 83                          ;
+;     normal            ; 88                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 31                          ;
-;         5 data inputs ; 19                          ;
-;         6 data inputs ; 10                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 40                          ;
+;         5 data inputs ; 16                          ;
+;         6 data inputs ; 11                          ;
 ;     shared            ; 9                           ;
 ;         0 data inputs ; 3                           ;
 ;         2 data inputs ; 3                           ;
@@ -385,7 +383,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 36                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 15.70                       ;
-; Average LUT depth     ; 7.92                        ;
+; Average LUT depth     ; 8.43                        ;
 +-----------------------+-----------------------------+
 
 
@@ -404,7 +402,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Nov 18 10:34:17 2026
+    Info: Processing started: Wed Nov 18 20:08:55 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -454,9 +452,9 @@ Info (12128): Elaborating entity "mux_8bit" for hierarchy "mux_8bit:din_select" 
 Info (12128): Elaborating entity "double_dabble" for hierarchy "double_dabble:dabbler" File: C:/projects/HDL/lab6/lab6/src/top.vhd Line: 101
 Info (12128): Elaborating entity "seven_seg" for hierarchy "seven_seg:ones_seg" File: C:/projects/HDL/lab6/lab6/src/top.vhd Line: 110
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "alu:alu1|Div0" File: C:/projects/HDL/lab6/lab6/src/alu.vhd Line: 29
-Info (12130): Elaborated megafunction instantiation "alu:alu1|lpm_divide:Div0" File: C:/projects/HDL/lab6/lab6/src/alu.vhd Line: 29
-Info (12133): Instantiated megafunction "alu:alu1|lpm_divide:Div0" with the following parameter: File: C:/projects/HDL/lab6/lab6/src/alu.vhd Line: 29
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "alu:alu1|Div0" File: C:/projects/HDL/lab6/lab6/src/alu.vhd Line: 28
+Info (12130): Elaborated megafunction instantiation "alu:alu1|lpm_divide:Div0" File: C:/projects/HDL/lab6/lab6/src/alu.vhd Line: 28
+Info (12133): Instantiated megafunction "alu:alu1|lpm_divide:Div0" with the following parameter: File: C:/projects/HDL/lab6/lab6/src/alu.vhd Line: 28
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -472,14 +470,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 214 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 211 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 23 output pins
-    Info (21061): Implemented 177 logic cells
+    Info (21061): Implemented 174 logic cells
     Info (21062): Implemented 1 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4966 megabytes
-    Info: Processing ended: Wed Nov 18 10:34:31 2026
+    Info: Peak virtual memory: 4928 megabytes
+    Info: Processing ended: Wed Nov 18 20:09:09 2026
     Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:27
 

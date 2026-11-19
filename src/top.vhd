@@ -86,21 +86,21 @@ port map(
 clk => clock,
 reset => rst,
 state => this_state,
-din => to_mem,
+din => r_sig,
 dout => last_result
 );
 
 din_select : mux_8bit
 port map(
-a => num_sync,
-b => r_sig,
+a => r_sig,
+b => num_sync,
 s => this_state,
 output => to_mem
 );
 
 dabbler : double_dabble
 port map(
-binary_in => last_result,
+binary_in => to_mem,
 ones => ones_dabbled,
 tens => tens_dabbled,
 hundreds => hund_dabbled
